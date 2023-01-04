@@ -43,7 +43,7 @@ app.get('/list', (req, res) =>{
 
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
-      cb(null, _path) 
+      cb(null, _path + "/download") 
     },
     filename: (req, res, cb) => {
       let fix = Buffer.from(res.originalname, 'latin1').toString('utf8') 
